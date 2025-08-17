@@ -1,0 +1,44 @@
+Relatório RQ07 - Contribuição, Releases e Frequência de Atualização por Linguagem
+Gerado em: 2025-08-14 00:59:03 UTC
+
+Pergunta:
+RQ07: Sistemas escritos em linguagens mais populares recebem mais contribuição externa,
+lançam mais releases e são atualizados com mais frequência?
+
+Resumo do conjunto de dados:
+- Repositórios analisados: 1000
+- Linguagens totais encontradas: 44
+- Linguagens populares presentes: Python, JavaScript, TypeScript, Java, C#, C++, PHP, Shell, C, Go
+- Repositórios em outras linguagens: 293
+
+Métricas por linguagem popular (média; mediana entre parênteses):
+- Python (n=187): PRs aceitos 3723.9 (548.0), releases 78.4 (22.0), tempo desde última atualização 2.4 horas (1.0 horas)
+- JavaScript (n=130): PRs aceitos 1711.8 (533.5), releases 94.8 (33.0), tempo desde última atualização 5.8 horas (3.0 horas)
+- TypeScript (n=156): PRs aceitos 4715.3 (2103.5), releases 236.6 (146.5), tempo desde última atualização 3.0 horas (1.0 horas)
+- Java (n=50): PRs aceitos 3541.6 (645.0), releases 66.8 (42.5), tempo desde última atualização 4.8 horas (3.0 horas)
+- C# (n=12): PRs aceitos 4012.6 (2780.5), releases 111.8 (100.0), tempo desde última atualização 0.8 horas (0.5 horas)
+- C++ (n=48): PRs aceitos 6924.7 (932.0), releases 148.8 (58.0), tempo desde última atualização 2.2 horas (1.0 horas)
+- PHP (n=7): PRs aceitos 10609.4 (2944.0), releases 373.7 (346.0), tempo desde última atualização 1.1 horas (0.0 horas)
+- Shell (n=19): PRs aceitos 912.5 (437.0), releases 58.4 (2.0), tempo desde última atualização 6.0 horas (4.0 horas)
+- C (n=25): PRs aceitos 1360.5 (113.0), releases 65.5 (32.0), tempo desde última atualização 2.0 horas (0.0 horas)
+- Go (n=73): PRs aceitos 5974.8 (1677.0), releases 163.8 (124.0), tempo desde última atualização 3.1 horas (2.0 horas)
+
+Rankings entre linguagens populares:
+1) Contribuição externa (PRs aceitos, média): PHP > C++ > Go > TypeScript > C# > Python > Java > JavaScript > C > Shell
+2) Releases (média): PHP > TypeScript > Go > C++ > C# > JavaScript > Python > Java > C > Shell
+3) Frequência de atualização (menor tempo desde última atualização é melhor): C# > PHP > C > C++ > Python > TypeScript > Go > Java > JavaScript > Shell
+
+Comparação agregado (Populares) vs (Outras linguagens):
+- PRs aceitos (média): Populares=3923.5 vs Outras=2728.9
+- Releases (média): Populares=131.6 vs Outras=51.5
+- Tempo desde última atualização (média, menor é melhor): Populares=3.4 horas vs Outras=4.1 horas
+
+Conclusão (agregado):
+- Contribuição externa maior em linguagens populares? SIM
+- Mais releases em linguagens populares? SIM
+- Atualizados mais frequentemente em populares? SIM
+
+Notas e limitações:
+- Os dados provêm dos repositórios do arquivo resultado.txt (amostra pode ser enviesada).
+- A métrica de atualização usa 'horas desde a última atualização' (menor é melhor).
+- Métricas são médias/medianas; amostras pequenas por linguagem podem distorcer resultados.
