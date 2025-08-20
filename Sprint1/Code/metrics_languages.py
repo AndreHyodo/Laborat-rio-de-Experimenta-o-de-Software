@@ -266,9 +266,34 @@ def write_report(text: str, path: str) -> None:
     with open(path, "w", encoding="utf-8") as f:
         f.write(text)
 
+import csv
+
+def write_csv(repos: list, path: str) -> None:
+    """Gera um arquivo CSV com separador ';' para melhor compatibilidade com Excel."""
+    if not repos:
+        return
+    fieldnames = [
+        "id",
+        "repo",
+        "idade_anos",
+        "prs_aceitos",
+        "total_releases",
+        "last_update_hours",
+        "language",
+        "closed_issues_ratio",
+    ]
+    with open(path, "w", encoding="utf-8", newline="") as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames, delimiter=';', quoting=csv.QUOTE_MINIMAL)
+        writer.writeheader()
+        for r in repos:
+            row = {k: r.get(k, "") for k in fieldnames}
+            writer.writerow(row)
+
 def main():
+
     in_path = sys.argv[1] if len(sys.argv) > 1 else INPUT_FILE
     out_path = sys.argv[2] if len(sys.argv) > 2 else OUTPUT_FILE
+    csv_path = "repositorios.csv"
 
     if not os.path.exists(in_path):
         print(f"Arquivo de entrada não encontrado: {in_path}")
@@ -281,7 +306,9 @@ def main():
 
     report = build_report(repos)
     write_report(report, out_path)
+    write_csv(repos, csv_path)
     print(f"Relatório gerado com sucesso em: {out_path}")
+    print(f"Arquivo CSV gerado com sucesso em: {csv_path}")
 
 if __name__ == "__main__":
     main()
