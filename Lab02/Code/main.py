@@ -120,7 +120,7 @@ if __name__ == "__main__":
             "id", "owner", "Repo", "Estrelas", "Idade (anos)", "Total releases",
             "Dias desde última atualização", "Linguagem primária"
         ]
-        with open("repos_java_metrics.csv", "w", encoding="utf-8", newline='') as f:
+        with open("../docs/repos_java_metrics.csv", "w", encoding="utf-8", newline='') as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
             for row in all_rows:
