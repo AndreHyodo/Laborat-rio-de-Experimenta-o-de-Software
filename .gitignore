@@ -1,0 +1,23 @@
+# Ignorar pastas temporárias de repositórios baixados
+Docs/repos/
+
+# Ignorar arquivos compilados do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+
+# Ignorar ambientes virtuais
+.venv/
+env/
+venv/
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar arquivos CSV gerados pela análise
+Lab02/Code/ck_analysis/repos/*.csv
+
+# Ignorar notebooks temporários
+*.ipynb_checkpoints/

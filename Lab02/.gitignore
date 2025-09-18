@@ -1,0 +1,23 @@
+# Ignorar pastas temporárias de repositórios baixados
+Docs/repos/
+
+# Ignorar arquivos compilados do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+
+# Ignorar ambientes virtuais
+.venv/
+env/
+venv/
+
+# Ignorar arquivos de log
+*.log
+*.csv
+
+**/repos/
+
+# Ignorar notebooks temporários
+*.ipynb_checkpoints/
