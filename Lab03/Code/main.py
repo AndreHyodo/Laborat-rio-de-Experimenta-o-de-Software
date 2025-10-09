@@ -11,9 +11,9 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from github_collector import GitHubCollector
-# from arquivosRestantesLab03.metrics_calculator import MetricsCalculator
-# from arquivosRestantesLab03.statistical_analyzer import StatisticalAnalyzer
-# from arquivosRestantesLab03.data_visualizer import DataVisualizer
+from metrics_calculator import MetricsCalculator
+from statistical_analyzer import StatisticalAnalyzer
+from data_visualizer import DataVisualizer
 
 def setup_logging(log_level='INFO'):
     """Configure logging for the application."""
@@ -32,16 +32,13 @@ def setup_logging(log_level='INFO'):
     return logging.getLogger(__name__)
 
 def parallel_collect_pull_requests(collector, repos_df, max_workers=8):
-    """
-    Coleta os PRs de múltiplos repositórios em paralelo.
-    Supõe que collector.collect_pull_requests_of_repo aceita owner, repo e retorna DataFrame.
-    """
     pr_dfs = []
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         futures = []
         for _, row in repos_df.iterrows():
             owner = row['owner']
             repo = row['name']
+            # Corrigir aqui para o nome certo do método
             futures.append(executor.submit(collector.collect_pull_requests_of_repo, owner, repo))
         for future in as_completed(futures):
             result = future.result()

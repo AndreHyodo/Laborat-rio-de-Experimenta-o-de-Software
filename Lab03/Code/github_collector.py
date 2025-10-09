@@ -89,7 +89,7 @@ class GitHubCollector:
             try:
                 prs = self._collect_repo_pull_requests(repo_name, min_prs=min_prs)
                 all_prs.extend(prs)
-                self.logger.info(f"Coletados {len(prs)} PRs de {repo_name}")
+                # self.logger.info(f"Coletados {len(prs)} PRs de {repo_name}")
             except Exception as e:
                 self.logger.error(f"Erro ao coletar PRs de {repo_name}: {str(e)}")
                 time.sleep(5)
@@ -97,6 +97,20 @@ class GitHubCollector:
         df = pd.DataFrame(all_prs)
         self.logger.info(f"Total de PRs coletados: {len(df)}")
         return df
+    
+    def collect_pull_requests_of_repo(self, owner: str, repo: str, min_prs: int = 100) -> pd.DataFrame:
+        """
+        Coleta os PRs de um único repositório (owner/repo) e retorna DataFrame.
+        """
+        repo_full_name = f"{owner}/{repo}"
+        try:
+            prs = self._collect_repo_pull_requests(repo_full_name, min_prs=min_prs)
+            df = pd.DataFrame(prs)
+            # self.logger.info(f"Coletados {len(df)} PRs de {repo_full_name}")
+            return df
+        except Exception as e:
+            self.logger.error(f"Erro ao coletar PRs de {repo_full_name}: {str(e)}")
+            return pd.DataFrame()
 
     def _collect_repo_pull_requests(self, repo_full_name: str, min_prs: int = 100) -> List[Dict]:
         prs = []
