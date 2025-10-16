@@ -129,6 +129,7 @@ class GitHubCollector:
             data = self._make_request(url, params)
             if not data: break
             for pr in data:
+                
                 # Use apenas campos já disponíveis aqui!
                 pr_info = {
                     'repository': repo_full_name,
@@ -142,7 +143,8 @@ class GitHubCollector:
                     'url': pr['html_url'],
                     'additions': pr.get('additions'),
                     'deletions': pr.get('deletions'),
-                    'changed_files': pr.get('changed_files')
+                    'changed_files': pr.get('changed_files'),
+                    # 'body': pr_details.get('body', '') if pr_details else ''
                 }
                 prs.append(pr_info)
                 collected += 1

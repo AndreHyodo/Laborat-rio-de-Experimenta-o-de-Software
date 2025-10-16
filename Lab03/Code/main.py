@@ -48,6 +48,14 @@ def parallel_collect_pull_requests(collector, repos_df, max_workers=8):
         return pd.concat(pr_dfs, ignore_index=True)
     return pd.DataFrame()
 
+# Remover PRs com tempo de análise menor que 1 hora
+def calc_analysis_hours(row):
+    created = pd.to_datetime(row['created_at'])
+    ended = pd.to_datetime(row['merged_at']) if pd.notnull(row['merged_at']) else pd.to_datetime(row['closed_at'])
+    if pd.isnull(ended):
+        return 0
+    return (ended - created).total_seconds() / 3600
+
 def main():
     """Função principal do laboratório."""
     parser = argparse.ArgumentParser(description='Lab03 - Code Review Analysis')
