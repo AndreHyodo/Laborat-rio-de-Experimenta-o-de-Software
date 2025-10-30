@@ -1,0 +1,6 @@
+repo,stars,forks,dependencies,dev_dependencies,vulnerable_deps,cves,path_usado
+facebook/react,240057,49660,0,0,0,[],
+trekhleb/javascript-algorithms,193647,30919,0,0,0,[],
+airbnb/javascript,147684,26798,0,0,0,[],
+f/awesome-chatgpt-prompts,135776,18068,0,0,0,[],
+vercel/next.js,135292,29677,5,221,3,"['GHSA-566m-qj78-rww5', 'GHSA-7fh5-64p2-3v2j', 'GHSA-hwj9-h5mp-3pm3']",packages/next
