@@ -1,0 +1,42 @@
+rest:
+  base_url: "https://api.github.com"
+  endpoints:
+    - path: "/users/octocat"
+      label: "user_detail"
+    - path: "/users/octocat/repos?per_page=100"
+      label: "user_repos"
+
+graphql:
+  url: "https://api.github.com/graphql"
+  queries:
+    - name: "user_detail"
+      query: |
+        query ($login: String!) {
+          user(login: $login) { login name id }
+        }
+      variables:
+        login: "octocat"
+    - name: "user_repos"
+      query: |
+        query ($login: String!) {
+          user(login: $login) {
+            repositories(first: 100, privacy: PUBLIC) {
+              nodes { name id }
+            }
+          }
+        }
+      variables:
+        login: "octocat"
+
+benchmark:
+  trials: 20
+  sleep_between_ms: 100
+  randomize_order: true
+  concurrent_requests: 1
+  timeout_seconds: 10
+
+metrics:
+  extra_headers:
+    # Authorization: "Bearer ${GITHUB_TOKEN}"
+    # Accept: "application/vnd.github+json"
+    {}

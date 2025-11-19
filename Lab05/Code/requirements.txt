@@ -1,0 +1,19 @@
+# Lab05 - GraphQL vs REST Benchmark Dependencies
+
+# Core HTTP/GraphQL
+requests>=2.28.0
+graphql-core>=3.2.0
+gql>=3.4.0
+requests-toolbelt>=0.10.1
+
+# Data & Analysis
+pandas>=1.5.0
+numpy>=1.21.0
+
+# Config
+pyyaml>=6.0.0
+
+# Optional (for progress, notebooks)
+# tqdm>=4.64.0
+# jupyter>=1.0.0
+# ipykernel>=6.15.0

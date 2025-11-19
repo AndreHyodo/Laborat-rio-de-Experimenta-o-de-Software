@@ -1,0 +1,23 @@
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment (apenas deste lab)
+.venv/
+
+# Configurações sensíveis deste lab
+Code/config.yaml
+
+# Saídas intermediárias de análise
+Results/analysis/**
+
+# IDE/SO (apenas dentro de Lab05)
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Notebooks temporários
+**/.ipynb_checkpoints/
