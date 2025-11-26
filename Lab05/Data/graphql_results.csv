@@ -99,3 +99,43 @@ trial_id,type,name,url,latency_ms,payload_bytes,status_code,timestamp_start,time
 48,GraphQL,user_repos,https://api.github.com/graphql,1895.867,6837,200,1763522440.469024,1763522442.3648865,
 49,GraphQL,user_detail,https://api.github.com/graphql,879.055,83,200,1763522442.665203,1763522443.5442548,
 49,GraphQL,user_repos,https://api.github.com/graphql,1974.126,6837,200,1763522443.845079,1763522445.8192005,
+0,GraphQL,user_detail,https://api.github.com/graphql,631.114,0,-1,1764119050.4945395,1764119051.1256511,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+0,GraphQL,user_repos,https://api.github.com/graphql,594.268,0,-1,1764119051.228532,1764119051.8227956,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+1,GraphQL,user_detail,https://api.github.com/graphql,805.476,0,-1,1764119051.9247653,1764119052.7302394,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+1,GraphQL,user_repos,https://api.github.com/graphql,714.716,0,-1,1764119052.8322053,1764119053.5469193,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+2,GraphQL,user_detail,https://api.github.com/graphql,680.321,0,-1,1764119053.649413,1764119054.3297324,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+2,GraphQL,user_repos,https://api.github.com/graphql,607.904,0,-1,1764119054.4319859,1764119055.0398886,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+3,GraphQL,user_detail,https://api.github.com/graphql,539.96,0,-1,1764119055.142745,1764119055.6827018,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+3,GraphQL,user_repos,https://api.github.com/graphql,629.723,0,-1,1764119055.785795,1764119056.4155152,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+4,GraphQL,user_detail,https://api.github.com/graphql,763.566,0,-1,1764119056.5181184,1764119057.2816832,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+4,GraphQL,user_repos,https://api.github.com/graphql,769.388,0,-1,1764119057.3846104,1764119058.1539898,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+5,GraphQL,user_detail,https://api.github.com/graphql,724.956,0,-1,1764119058.256024,1764119058.9809783,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+5,GraphQL,user_repos,https://api.github.com/graphql,596.033,0,-1,1764119059.083777,1764119059.6798072,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+6,GraphQL,user_detail,https://api.github.com/graphql,521.529,0,-1,1764119059.7827818,1764119060.304307,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+6,GraphQL,user_repos,https://api.github.com/graphql,591.554,0,-1,1764119060.4067864,1764119060.9983385,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+7,GraphQL,user_detail,https://api.github.com/graphql,526.183,0,-1,1764119061.1017253,1764119061.6279054,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+7,GraphQL,user_repos,https://api.github.com/graphql,706.661,0,-1,1764119061.7302132,1764119062.4368727,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+8,GraphQL,user_detail,https://api.github.com/graphql,510.415,0,-1,1764119062.538433,1764119063.0488453,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+8,GraphQL,user_repos,https://api.github.com/graphql,587.035,0,-1,1764119063.1508224,1764119063.7378547,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+9,GraphQL,user_detail,https://api.github.com/graphql,603.794,0,-1,1764119063.8410604,1764119064.444852,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+9,GraphQL,user_repos,https://api.github.com/graphql,691.543,0,-1,1764119064.5474317,1764119065.2389734,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+10,GraphQL,user_detail,https://api.github.com/graphql,642.694,0,-1,1764119065.3411372,1764119065.9838285,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+10,GraphQL,user_repos,https://api.github.com/graphql,568.735,0,-1,1764119066.0857277,1764119066.6544604,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+11,GraphQL,user_detail,https://api.github.com/graphql,584.218,0,-1,1764119066.75683,1764119067.3410459,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+11,GraphQL,user_repos,https://api.github.com/graphql,569.564,0,-1,1764119067.4428618,1764119068.0124223,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+12,GraphQL,user_detail,https://api.github.com/graphql,550.371,0,-1,1764119068.115342,1764119068.66571,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+12,GraphQL,user_repos,https://api.github.com/graphql,535.61,0,-1,1764119068.7688313,1764119069.304439,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+13,GraphQL,user_detail,https://api.github.com/graphql,685.989,0,-1,1764119069.4067295,1764119070.0927167,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+13,GraphQL,user_repos,https://api.github.com/graphql,485.812,0,-1,1764119070.195068,1764119070.6808786,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+14,GraphQL,user_detail,https://api.github.com/graphql,544.794,0,-1,1764119070.7841039,1764119071.328894,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+14,GraphQL,user_repos,https://api.github.com/graphql,604.995,0,-1,1764119071.4321315,1764119072.0371249,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+15,GraphQL,user_detail,https://api.github.com/graphql,582.711,0,-1,1764119072.1395876,1764119072.7222955,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+15,GraphQL,user_repos,https://api.github.com/graphql,677.391,0,-1,1764119072.8245993,1764119073.5019882,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+16,GraphQL,user_detail,https://api.github.com/graphql,581.217,0,-1,1764119073.6053884,1764119074.186603,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+16,GraphQL,user_repos,https://api.github.com/graphql,763.514,0,-1,1764119074.289602,1764119075.0531156,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+17,GraphQL,user_detail,https://api.github.com/graphql,947.705,0,-1,1764119075.1551626,1764119076.102867,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+17,GraphQL,user_repos,https://api.github.com/graphql,856.365,0,-1,1764119076.2052436,1764119077.0616076,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+18,GraphQL,user_detail,https://api.github.com/graphql,999.296,0,-1,1764119077.1635506,1764119078.1628356,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+18,GraphQL,user_repos,https://api.github.com/graphql,1421.198,0,-1,1764119078.2653203,1764119079.6865165,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+19,GraphQL,user_detail,https://api.github.com/graphql,1213.006,0,-1,1764119079.7887743,1764119081.0017788,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql
+19,GraphQL,user_repos,https://api.github.com/graphql,869.626,0,-1,1764119081.1039748,1764119081.9735987,403 Client Error: rate limit exceeded for url: https://api.github.com/graphql

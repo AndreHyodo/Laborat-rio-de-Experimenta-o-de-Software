@@ -28,27 +28,35 @@ Este documento descreve o desenho (Passo 1) e a preparação (Passo 2) do experi
 
 ### E. Objetos Experimentais
 
-- Uma API que ofereça tanto endpoints REST quanto uma interface GraphQL com queries equivalentes.
-- Exemplo genérico (substituir no arquivo de configuração):
-  - REST: `/users/1`, `/users`
-  - GraphQL: `user(id: 1) { id name email }`, `users { id name }`
+- API de teste: Uma aplicação que oferece tanto endpoints REST quanto uma interface GraphQL com queries equivalentes.
+- Cenários de teste:
+  - REST: `/users/1` , `/users` , `/products` , `/products/1` , `/orders/1`
+  - GraphQL: `user(id: 1) { id name email }` , `users { id name }` , `products { id name price }` , etc.
 
 ### F. Tipo de Projeto Experimental
 
-- Projeto intra-sujeitos (medidas repetidas): o mesmo ambiente executa ambos os tratamentos.
-- Ordem de execução randômica para reduzir viés de ordem (REST/GraphQL ou GraphQL/REST).
-- Número de medições por consulta configurável (e.g., 30 ou 50 repetições por consulta/tratamento).
+- **Projeto intra-sujeitos (medidas repetidas):** o mesmo ambiente executa ambos os tratamentos.
+- **Ordem de execução randômica** para reduzir viés de ordem (REST/GraphQL ou GraphQL/REST).
+- **Número de medições por consulta:** 50 repetições por consulta/tratamento para garantir significância estatística.
+- **Análise estatística planejada:** Teste t de Student para amostras pareadas (se os dados seguirem distribuição normal) ou teste de Wilcoxon (se não paramétrico).
 
 ### G. Ameaças à Validade
 
-- Interna: ruído de rede, variação de carga do servidor/cliente, cache aquecido vs frio.
-  - Mitigação: aquecer cache com poucas requisições iniciais; intervalos fixos entre requisições; ordem aleatória.
-- Externa: generalização para outras APIs e cenários; esquema/shape de dados diferentes.
-  - Mitigação: testar múltiplas consultas com perfis distintos (detalhe vs lista), registrar contexto da API.
-- Construto: equivalência semântica entre endpoint REST e query GraphQL.
-  - Mitigação: validar que os campos retornados são comparáveis em conteúdo.
-- Conclusão: tamanho amostral insuficiente; pressupostos estatísticos violados.
-  - Mitigação: usar verificação de normalidade; aplicar testes não-paramétricos se necessário; aumentar repetições.
+- Interna:
+  - Ruído de rede, variação de carga do servidor/cliente
+  - Cache aquecido vs frio
+  - Mitigação: aquecer cache com requisições iniciais; intervalos fixos entre requisições; ordem aleatória; ambiente controlado
+- Externa:
+  - Generalização para outras APIs e cenários
+  - Esquema/shape de dados diferentes
+  - Mitigação: testar múltiplas consultas com perfis distintos (detalhe vs lista), registrar contexto da API
+- Construto:
+  - Equivalência semântica entre endpoint REST e query GraphQL
+  - Mitigação: validar que os campos retornados são comparáveis em conteúdo
+- Conclusão:
+  - Tamanho amostral insuficiente
+  - Pressupostos estatísticos violados
+  - Mitigação: usar verificação de normalidade; aplicar testes não-paramétricos se necessário; aumentar repetições
 
 ---
 
