@@ -1,0 +1,4 @@
+name,type,n,latency_median,latency_mean,payload_median,payload_mean
+UNKNOWN,REST,140,911.746,885.9881642857142,20912.5,21158.785714285714
+user_detail,GraphQL,50,922.3615,941.42872,83.0,83.0
+user_repos,GraphQL,50,2099.0665,2120.68228,6837.0,6837.0
